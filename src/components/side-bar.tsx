@@ -34,7 +34,7 @@ function SidebarItem({
 
 export default function Sidebar() {
   return (
-    <div className="h-screen w-70 p-10 px-8 shadow-lg bg-white dark:bg-slate-900">
+    <div className="h-full w-70 p-10 px-8 shadow-lg bg-white dark:bg-slate-900">
       <div className="flex flex-col gap-5 mb-10">
         <Image src={Logo} alt="Logo" width={180} />
         <div className="flex flex-col gap-2">

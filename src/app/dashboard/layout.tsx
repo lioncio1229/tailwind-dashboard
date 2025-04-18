@@ -7,8 +7,12 @@ export default function Layout({
 }>) {
   return (
     <div className="flex flex-row">
-      <Sidebar />
-      {children}
+      <div>
+        <Sidebar />
+      </div>
+      <div className="h-screen w-full overflow-auto">
+        {children}
+      </div>
     </div>
   );
 }
