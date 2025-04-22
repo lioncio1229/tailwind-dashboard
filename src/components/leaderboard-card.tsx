@@ -50,14 +50,16 @@ function LeaderboardItem({ leaderboard }: { leaderboard: Leaderboard }) {
 }
 
 export default function LeaderboardCard({
+  title,
   leaderboards = [],
 }: {
+  title?: string;
   leaderboards: Leaderboard[];
 }) {
   return (
     <Paper className="p-5 pb-8">
       <div className="w-full flex justify-between align-middle pb-3 text-gray-600 dark:text-white ">
-        <div className="text-sm">User Leaderboard</div>
+        <div className="text-sm">{title}</div>
       </div>
       <div className="flex flex-col gap-6 pt-4">
         {leaderboards.map((leaderboard) => (

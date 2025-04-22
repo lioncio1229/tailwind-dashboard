@@ -1,7 +1,6 @@
 import Button from "@/components/button";
 import { LucideDownload } from "lucide-react";
 import ReportFilters from "@/components/report-filters";
-import Paper from "@/components/paper";
 import SummaryCard from "@/components/summary-card";
 import ActivityCard from "@/components/activity-card";
 import TopicsCard, { type Topic } from "@/components/topics-card";
@@ -54,7 +53,7 @@ export default function Page() {
     },
   ];
 
-  const individualLeaderboard : Leaderboard[] = [
+  const userLeaderboard : Leaderboard[] = [
     {
       name: "Jesse Thomas",
       image: Alpha,
@@ -132,8 +131,8 @@ export default function Page() {
         topics={strongestTopics}
         color="green"
         />
-        <LeaderboardCard leaderboards={individualLeaderboard} />
-        <LeaderboardCard leaderboards={groupLeaderboard} />
+        <LeaderboardCard title="User Leaderboard" leaderboards={userLeaderboard} />
+        <LeaderboardCard title="Groups Leaderboard" leaderboards={groupLeaderboard} />
       </div>
     </div>
   );
