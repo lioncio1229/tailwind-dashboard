@@ -92,7 +92,6 @@ export default function Select({
   label,
   option,
   value,
-  defaultValue = "",
   onChange,
 }: {
   id: string;
@@ -100,7 +99,6 @@ export default function Select({
   label?: string;
   option: string[];
   value?: string;
-  defaultValue?:string;
   onChange?: (value: string) => void;
 }) {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -215,7 +213,7 @@ export default function Select({
         onKeyDown={handleKeyDown}
         tabIndex={0}
         className={clsx(
-          "group flex justify-between items-center p-2 border-1 border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 rounded-lg cursor-pointer select-none",
+          "group flex justify-between items-center p-2 border-1 border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 rounded-lg cursor-pointer select-none outline-none focus:dark:bg-slate-950",
           { "border-b-0 rounded-b-none": open && !fliptted },
           { "border-t-0 rounded-t-none": open && fliptted }
         )}
@@ -228,12 +226,10 @@ export default function Select({
             id={id}
             ref={inputRef}
             type="text"
-            name={name}
             className="outline-none ml-2 text-gray-700 font-medium dark:text-white dark:font-normal select-none"
             readOnly
             aria-hidden="true"
             tabIndex={-1}
-            defaultValue={defaultValue}
             {...(value && { value })}
           />
         </div>
