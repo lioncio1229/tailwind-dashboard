@@ -226,7 +226,7 @@ export default function Select({
             id={id}
             ref={inputRef}
             type="text"
-            className="outline-none ml-2 text-gray-700 font-medium dark:text-white dark:font-normal select-none"
+            className="outline-none ml-2 text-dark font-medium dark:text-white dark:font-normal select-none"
             readOnly
             aria-hidden="true"
             tabIndex={-1}

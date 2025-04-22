@@ -10,7 +10,7 @@ import {
   Settings,
   LucideProps,
 } from "lucide-react";
-import { ForwardRefExoticComponent, ReactElement, createElement } from "react";
+import { ReactElement, createElement } from "react";
 
 function SidebarItem({
   icon,

@@ -1,10 +1,10 @@
-import Button from "@/components/button";
-import { LucideDownload } from "lucide-react";
 import ReportFilters from "@/components/report-filters";
 import SummaryCard from "@/components/summary-card";
 import ActivityCard from "@/components/activity-card";
 import TopicsCard, { type Topic } from "@/components/topics-card";
-import LeaderboardCard, { type Leaderboard } from "@/components/leaderboard-card";
+import LeaderboardCard, {
+  type Leaderboard,
+} from "@/components/leaderboard-card";
 
 import Food from "@/app/food.jpeg";
 import Medicine from "@/app/medicine.jpg";
@@ -53,7 +53,7 @@ export default function Page() {
     },
   ];
 
-  const userLeaderboard : Leaderboard[] = [
+  const userLeaderboard: Leaderboard[] = [
     {
       name: "Jesse Thomas",
       image: Alpha,
@@ -77,39 +77,35 @@ export default function Page() {
     },
   ];
 
-  const groupLeaderboard : Leaderboard[] = [
+  const groupLeaderboard: Leaderboard[] = [
     {
-        name: "Houston Facility",
-        value: "1",
-        positive: true,
-        secondaryValue: "700 Points - 100% Correct",
+      name: "Houston Facility",
+      value: "1",
+      positive: true,
+      secondaryValue: "700 Points - 100% Correct",
     },
     {
-        name: "Test Group",
-        value: "2",
-        positive: false,
-        secondaryValue: "700 Points - 100% Correct",
+      name: "Test Group",
+      value: "2",
+      positive: false,
+      secondaryValue: "700 Points - 100% Correct",
     },
     {
-        name: "Sales Leadership",
-        value: "3",
-        positive: true,
-        secondaryValue: "700 Points - 100% Correct",
+      name: "Sales Leadership",
+      value: "3",
+      positive: true,
+      secondaryValue: "700 Points - 100% Correct",
     },
     {
-        name: "Northeast Region",
-        value: "4",
-        positive: true,
-        secondaryValue: "700 Points - 100% Correct",
+      name: "Northeast Region",
+      value: "4",
+      positive: true,
+      secondaryValue: "700 Points - 100% Correct",
     },
   ];
 
   return (
     <div className="flex flex-col gap-3 w-full px-5 mb-8">
-      <div className="position flex justify-between items-center p-5 border-b-1 border-gray-200 dark:border-gray-700">
-        <span className="font-bold text-2xl">Reports</span>
-        <Button label="Download" icon={<LucideDownload size={16} />} />
-      </div>
       <ReportFilters />
       <div className="grid grid-cols-2 gap-4">
         <div className="h-80 overflow-hidden">
@@ -127,12 +123,18 @@ export default function Page() {
         </div>
         <TopicsCard title="Weakest Topics" topics={weakestTopics} />
         <TopicsCard
-        title="Weakest Topics"
-        topics={strongestTopics}
-        color="green"
+          title="Weakest Topics"
+          topics={strongestTopics}
+          color="green"
         />
-        <LeaderboardCard title="User Leaderboard" leaderboards={userLeaderboard} />
-        <LeaderboardCard title="Groups Leaderboard" leaderboards={groupLeaderboard} />
+        <LeaderboardCard
+          title="User Leaderboard"
+          leaderboards={userLeaderboard}
+        />
+        <LeaderboardCard
+          title="Groups Leaderboard"
+          leaderboards={groupLeaderboard}
+        />
       </div>
     </div>
   );

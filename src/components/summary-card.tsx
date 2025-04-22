@@ -18,7 +18,7 @@ export default function SummaryCard({
       <span className="text-sm mb-1 text-gray-600 dark:text-gray-400 block">
         {title}
       </span>
-      <span className="text-2xl font-bold dark:font-medium text-gray-700 dark:text-white block">
+      <span className="text-2xl font-bold dark:font-medium text-dark dark:text-white block">
         {value}
       </span>
       <div className='h-10'>
