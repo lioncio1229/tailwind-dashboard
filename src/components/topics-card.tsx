@@ -19,7 +19,7 @@ function TopicItem({
   const id = useId();
 
   return (
-    <div className="flex gap-3 justify-between items-end">
+    <div className="@container flex gap-3 justify-between items-end">
       <Image
         src={topic.image}
         alt="Food"

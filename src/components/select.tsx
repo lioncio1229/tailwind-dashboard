@@ -213,29 +213,27 @@ export default function Select({
         onKeyDown={handleKeyDown}
         tabIndex={0}
         className={clsx(
-          "group flex justify-between items-center p-2 border-1 border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 rounded-lg cursor-pointer select-none outline-none focus:dark:bg-slate-950",
+          "group flex justify-between items-center p-2 border-1 border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 rounded-lg cursor-pointer select-none outline-none focus:dark:bg-slate-950 overflow-hidden",
           { "border-b-0 rounded-b-none": open && !fliptted },
           { "border-t-0 rounded-t-none": open && fliptted }
         )}
       >
-        <div>
-          <label className="text-gray-500 dark:text-gray-400">
+          <label className="shrink-0 grow overflow-hidden text-ellipsis text-gray-500 dark:text-gray-400 cursor-pointer">
             {`${label}:`}
           </label>
           <input
             id={id}
             ref={inputRef}
             type="text"
-            className="outline-none ml-2 text-dark font-medium dark:text-white dark:font-normal select-none"
+            className="w-full grow overflow-hidden text-ellipsis outline-none ml-2 text-dark font-medium dark:text-white dark:font-normal cursor-pointer select-none"
             readOnly
             aria-hidden="true"
             tabIndex={-1}
             {...(value && { value })}
           />
-        </div>
         <ChevronDown
           className={clsx(
-            "text-gray-400 transition-transform duration-200 ease-out",
+            "shrink-0 grow text-gray-400 transition-transform duration-200 ease-out",
             { "rotate-180": open },
             { "rotate-0": !open }
           )}

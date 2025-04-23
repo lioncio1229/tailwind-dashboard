@@ -27,7 +27,7 @@ export default function ProgressBar({
   }
 
   return (
-    <div id={id} className="w-full bg-gray-200 rounded-full h-3 dark:bg-gray-700">
+    <div id={id} className="w-full bg-gray-200 rounded-full h-3 @max-[400px]:h-2.5 dark:bg-gray-700">
       <div className={`bg-linear-to-r h-full rounded-full ${linearGradient[color]} ${darkLinearGradient[color]}`} style={{ width: `${value}%` }}></div>
     </div>
   );

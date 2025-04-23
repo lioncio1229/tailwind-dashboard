@@ -14,7 +14,7 @@ export default function Layout({
         <Sidebar />
       </div>
       <div className="h-screen w-full overflow-auto">
-        <div className="sticky top-0 flex justify-between items-center bg-white dark:bg-slate-800 p-5 border-b-1 border-gray-200 dark:border-gray-700 mb-4">
+        <div className="sticky min-w-xl top-0 flex justify-between items-center bg-white dark:bg-slate-800 p-5 border-b-1 border-gray-200 dark:border-gray-700 mb-4">
           <span className="font-bold text-2xl">Reports</span>
           <div className="flex items-center gap-2">
             <Button label="Download" icon={<LucideDownload size={16} />} />

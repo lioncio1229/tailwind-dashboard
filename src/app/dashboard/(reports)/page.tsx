@@ -105,10 +105,10 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex flex-col gap-3 w-full px-5 mb-8">
+    <div className="flex flex-col min-w-xl gap-3 px-5 mb-8">
       <ReportFilters />
       <div className="grid grid-cols-2 gap-4">
-        <div className="h-80 overflow-hidden">
+        <div className="h-80 col-span-2 xl:col-span-1">
           <div className="grid grid-cols-3 gap-3 h-full">
             <SummaryCard title="Active Users" value="27/80" />
             <SummaryCard title="Questions Answered" value="3,298" />
@@ -118,23 +118,31 @@ export default function Page() {
             <SummaryCard title="Knowledge Gain" value="+34%" showGraph />
           </div>
         </div>
-        <div className="h-80">
+        <div className="xl:h-80 col-span-2 lg:col-span-1">
           <ActivityCard />
         </div>
-        <TopicsCard title="Weakest Topics" topics={weakestTopics} />
-        <TopicsCard
-          title="Weakest Topics"
-          topics={strongestTopics}
-          color="green"
-        />
-        <LeaderboardCard
-          title="User Leaderboard"
-          leaderboards={userLeaderboard}
-        />
-        <LeaderboardCard
-          title="Groups Leaderboard"
-          leaderboards={groupLeaderboard}
-        />
+        <div className="col-span-2 lg:col-span-1">
+          <TopicsCard title="Weakest Topics" topics={weakestTopics} />
+        </div>
+        <div className="col-span-2 lg:col-span-1">
+          <TopicsCard
+            title="Strongest Topics"
+            topics={strongestTopics}
+            color="green"
+          />
+        </div>
+        <div className="col-span-2 lg:col-span-1">
+          <LeaderboardCard
+            title="User Leaderboard"
+            leaderboards={userLeaderboard}
+          />
+        </div>
+        <div className="col-span-2 lg:col-span-1">
+          <LeaderboardCard
+            title="Groups Leaderboard"
+            leaderboards={groupLeaderboard}
+          />
+        </div>
       </div>
     </div>
   );
